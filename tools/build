@@ -1,0 +1,10 @@
+cd ..
+if [ ! -d "venvs" ]
+then
+    mkdir venvs
+fi
+cd venvs
+python3 -m venv owl-env
+source owl-env/bin/activate
+cd ../
+python setup.py install

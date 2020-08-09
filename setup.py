@@ -13,7 +13,7 @@ def getRequirements():
 # Initalize Package Setup Upon Pip Installation
 setup(
     name = 'owl',
-    version = '0.0.1',
+    version = '1.0.0',
     python_requires = '>=3.6',
     description = DESC,
     long_description = DESC,
@@ -22,7 +22,16 @@ setup(
     maintainer = 'Aidan E. Dykstal',
     maintainer_email = 'dykstala@gmail.com',
     url = 'https://github.com/dykstal/owl',
+    download_url = 'https://github.com/dykstal/owl',
+    license = 'MIT',
     include_package_data = True,
     install_requires = getRequirements(),
-    packages = find_packages()
+    packages = find_packages(),
+    classifiers = [
+        'Development Status :: 3 - Alpha',
+        'Indended Audience :: Data Consumers',
+        'Topic :: Data Management and Analysis',
+        'License :: OSI Approved :: MIT License',
+        'Programming Language :: Python :: 3.6'
+    ],
 )

@@ -1,6 +1,6 @@
 import pandas as pd
-from owl.models.DataStructure import DataStructure
-from owl.structures.Record import Record
+from shinobi.models.DataStructure import DataStructure
+from shinobi.structures.Record import Record
 
 class RecordCollection(DataStructure):
     def __init__(self, *args, records=None, **kwargs):

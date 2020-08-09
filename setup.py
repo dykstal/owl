@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 # Create Short Description
-DESC = '''Python OWL is an Open Source Big Data Management and Analytic Service.'''
+DESC = '''Python `shinobi` is an Open Source Big Data Management and Analytic Service.'''
 
 # Get Python Package Requirements
 def getRequirements():
@@ -12,8 +12,8 @@ def getRequirements():
 
 # Initalize Package Setup Upon Pip Installation
 setup(
-    name = 'owl',
-    version = '0.1.1',
+    name = 'shinobi',
+    version = '0.1.2',
     python_requires = '>=3.6',
     description = DESC,
     long_description = DESC,
@@ -21,8 +21,8 @@ setup(
     author_email = 'dykstala@gmail.com',
     maintainer = 'Aidan E. Dykstal',
     maintainer_email = 'dykstala@gmail.com',
-    url = 'https://github.com/dykstal/owl',
-    download_url = 'https://github.com/dykstal/owl/archive/v0.1.0-alpha.tar.gz',
+    url = 'https://github.com/dykstal/shinobi',
+    download_url = 'https://github.com/dykstal/shinobi/archive/v0.1.2-alpha.tar.gz',
     license = 'MIT',
     include_package_data = True,
     install_requires = getRequirements(),

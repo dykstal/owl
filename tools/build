@@ -4,7 +4,8 @@ then
     mkdir venvs
 fi
 cd venvs
-python3 -m venv owl-env
-source owl-env/bin/activate
+python3 -m venv shinobi-env
+source shinobi-env/bin/activate
 cd ../
+pip install -r requirements.txt
 python setup.py install

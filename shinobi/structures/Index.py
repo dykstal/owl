@@ -1,9 +1,9 @@
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
-from owl.models.DataStructure import DataStructure
-from owl.structures.Record import Record
-from owl.structures.RecordCollection import RecordCollection
-from owl.utils import queryFromFilter
+from shinobi.models.DataStructure import DataStructure
+from shinobi.structures.Record import Record
+from shinobi.structures.RecordCollection import RecordCollection
+from shinobi.utils import queryFromFilter
 
 class Index(DataStructure):
     '''
@@ -57,11 +57,11 @@ class Index(DataStructure):
         # Otherwise, Grab any Records from the Filter
         else:
             self.query = queryFromFilter(self.filters)
-            generator = self._makeGenerator()            
+            generator = self._makeGenerator()
         self.generator = generator
         return self
 
-    def toRecordCollection(self):
+    def collect(self):
         '''
         Return Selected Results as a Record Collection Object.
         '''

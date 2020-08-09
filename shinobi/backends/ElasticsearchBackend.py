@@ -1,14 +1,14 @@
 import elasticsearch
 from elasticsearch.helpers import bulk
-from owl.models.Backend import Backend
+from shinobi.models.Backend import Backend
 
-class Elasticsearch(Backend):
+class ElasticsearchBackend(Backend):
     '''
     A Class to Ingest and Manage the Elasticsearch Backend
     for a Particular Index.
     '''
     def __init__(self, *args, project=None, source=None, mappings=None, **kwargs):
-        super(Elasticsearch, self).__init__(*args, **kwargs)
+        super(ElasticsearchBackend, self).__init__(*args, **kwargs)
         self.es = elasticsearch.Elasticsearch()
         self.project = project
         self.source = source

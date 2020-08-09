@@ -1,7 +1,6 @@
 import json
-from owl.utils import formatRecord
-from owl.models.DataStructure import DataStructure
-from owl.utils import detectGeoJSON, toWKT
+from shinobi.models.DataStructure import DataStructure
+from shinobi.utils import formatRecord, detectGeoJSON, toWKT
 
 class Record(DataStructure):
     '''

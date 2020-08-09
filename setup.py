@@ -3,13 +3,6 @@ from setuptools import setup, find_packages
 # Create Short Description
 DESC = '''Python `shinobi` is an Open Source Big Data Management and Analytic Service.'''
 
-# Get Python Package Requirements
-def getRequirements():
-    reqs = []
-    with open('requirements.txt') as fp: reqs += fp.readlines()
-    reqs = map(str.strip, reqs)
-    return reqs
-
 # Initalize Package Setup Upon Pip Installation
 setup(
     name = 'shinobi',
@@ -25,7 +18,12 @@ setup(
     download_url = 'https://github.com/dykstal/shinobi/archive/v0.1.3-alpha.tar.gz',
     license = 'MIT',
     include_package_data = True,
-    install_requires = getRequirements(),
+    install_requires = [
+        'elasticsearch==7.8.1',
+        'geodaisy>=0.1.1',
+        'pandas>=1.1.0',
+        'virtualenv>=20.0.30'
+    ],
     packages = find_packages(),
     classifiers = [
         'Development Status :: 3 - Alpha',

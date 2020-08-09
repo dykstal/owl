@@ -22,7 +22,7 @@ setup(
     maintainer = 'Aidan E. Dykstal',
     maintainer_email = 'dykstala@gmail.com',
     url = 'https://github.com/dykstal/owl',
-    download_url = 'https://github.com/dykstal/owl',
+    download_url = 'https://github.com/dykstal/owl/archive/v0.1.0-alpha.zip',
     license = 'MIT',
     include_package_data = True,
     install_requires = getRequirements(),

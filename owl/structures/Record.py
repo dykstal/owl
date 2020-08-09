@@ -6,7 +6,9 @@ class Record(DataStructure):
     '''
     A Dictionary Record Mapping Attribute Names to Attribute Values.
     '''
-    def __init__(self, dictionary, *args, **kwargs):
+    def __init__(self, *args, **kwargs):
+        if len(args) > 0: dictionary = args[0]
+        else: dictionary = {}
         kwargs.update(dictionary)
         super(Record, self).__init__(self, *args, **kwargs)
         self.raw = dictionary.copy()

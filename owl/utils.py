@@ -1,4 +1,5 @@
-import dateutil.parser
+import logging
+from dateutil.parser import parse
 #import shapely
 
 def formatRecord(record):
@@ -10,7 +11,7 @@ def formatRecord(record):
     '''
     # 1. Represent Times as Datetime Objects
     for attribute in record:
-        try: record[attribute] = dateutil.parser.parse(record[attribute])
+        try: record[attribute] = parse(record[attribute])
         except: continue
     return record
 

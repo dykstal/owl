@@ -24,5 +24,5 @@ setup(
     url = 'https://github.com/dykstal/owl',
     include_package_data = True,
     install_requires = getRequirements(),
-    packages = find_packages(exclude = ('unittest'))
+    packages = find_packages()
 )

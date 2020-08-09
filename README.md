@@ -3,7 +3,7 @@ Python `owl` is an open-source data management and analytic toolkit. Right now, 
 
 ## Prerequisites
 ### Elasticsearch
-Although `owl` users can leverage its data storage and analysis capabilities without a connection to an Elasticsearch cluster, it is recommended to access Elasticsearch to maximize the value of this package. The setup process for Elasticsearch is relatively straightforward and is well-documented with the following [setup-guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html). Elasticsearch version 7.8.1 or higher is recommended.
+Although `owl` users can leverage its data storage and analysis capabilities without a connection to an Elasticsearch cluster, it is recommended to access Elasticsearch to maximize the value of this package. The setup process for Elasticsearch is relatively straightforward and is well-documented with the following [setup guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/setup.html). Elasticsearch version 7.8.1 or higher is recommended.
 
 ## Quickstart
 ### Installation via `pip`

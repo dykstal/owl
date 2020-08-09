@@ -1,6 +1,7 @@
 import json
 from owl.utils import formatRecord
 from owl.models.DataStructure import DataStructure
+from owl.utils import detectGeoJSON, toWKT
 
 class Record(DataStructure):
     '''
@@ -29,3 +30,15 @@ class Record(DataStructure):
         return json.dumps(self.raw,
                           indent=3,
                           sort_keys=True)
+
+    def ingestable(self):
+        '''
+        Make a Record Ready for Ingest by Formatting the Record
+        with Appropriate Timestamps (Datetime Objects) and
+        Geometries (WKT Strings).
+        '''
+        ingestRec = self.rec.copy()
+        for attribute in ingestRec:
+            if detectGeoJSON(ingestRec[attribute]):
+                ingestRec[attribute] = toWKT(ingestRec[attribute])
+        return ingestRec

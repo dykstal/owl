@@ -1,3 +1,4 @@
+from shinobi.analytics.WeatherNLP import WeatherNLP
 from shinobi.backends.ElasticsearchBackend import ElasticsearchBackend
 from shinobi.structures.Index import Index
 from shinobi.structures.Record import Record

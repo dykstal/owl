@@ -16,10 +16,10 @@ class WeatherForecast(Analytic):
 
     Weather Data Comes from the Worldwide Open Weather Map Service.
     '''
-    def __init__(self, *args, **kwargs):
+    def __init__(self, *args, apiKey=None, **kwargs):
         super(WeatherForecast, self).__init__(*args, **kwargs)
         self.baseURL = '''https://api.openweathermap.org/data/2.5/forecast'''
-        self.appID = '''c8599abf3ef68ce79ecf92ee167d6843'''
+        self.appID = apiKey
         self.forecast = None
 
     def _recordForecast(self, res, intervalHours, units='metric'):

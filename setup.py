@@ -6,7 +6,7 @@ DESC = '''Python `shinobi` is an Open Source Big Data Management and Analytic Se
 # Initalize Package Setup Upon Pip Installation
 setup(
     name = 'shinobi',
-    version = '0.1.4',
+    version = '0.1.5',
     python_requires = '>=3.6',
     description = DESC,
     long_description = DESC,
@@ -15,14 +15,14 @@ setup(
     maintainer = 'Aidan E. Dykstal',
     maintainer_email = 'dykstala@gmail.com',
     url = 'https://github.com/dykstal/shinobi',
-    download_url = 'https://github.com/dykstal/shinobi/archive/v0.1.4-alpha.tar.gz',
+    download_url = 'https://github.com/dykstal/shinobi/archive/v0.1.5-alpha.tar.gz',
     license = 'MIT',
     include_package_data = True,
     install_requires = [
         'elasticsearch==7.8.1',
         'geodaisy>=0.1.1',
-        'pandas>=1.1.0',
-        'virtualenv>=20.0.30'
+        'pandas>=1.0.3',
+        'virtualenv>=20.0.20'
     ],
     packages = find_packages(),
     classifiers = [

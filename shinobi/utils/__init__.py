@@ -41,7 +41,7 @@ def formatRecord(record):
     '''
     for attribute in record:
         if detectWKT(attribute):
-            record[attribte] = wkt_to_geojson(attribute)
+            record[attribute] = wkt_to_geojson(attribute)
             continue
         try: record[attribute] = parse(record[attribute])
         except: continue

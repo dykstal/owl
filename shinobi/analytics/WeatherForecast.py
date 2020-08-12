@@ -112,6 +112,9 @@ class WeatherForecast(Analytic):
         elif state is not None:
             params['state'] = state
             paramURL = '''q={city},{state}&units={units}&appid={appID}'''.format(**params)
+        elif countryCode is not None:
+            params['country'] = countryCode
+            paramURL = '''q={city},{country}&units={units}&appid={appID}'''.format(**params)
         else:
             paramURL = '''q={city}&units={units}&appid={appID}'''.format(**params)
         res = requests.get(joinURLs(self.baseURL, paramURL)).json()

@@ -60,8 +60,8 @@ class WeatherForecast(Analytic):
                         + datetime.timedelta(hours=intervalHours)).isoformat(),
                     'temperature_{0}'.format(tempUnit): x['main']['temp'],
                     'feelsLike_{0}'.format(tempUnit): x['main']['feels_like'],
-                    'tempMin_{0}'.format(tempUnit): x['main']['temp_min'],
-                    'tempMax_{0}'.format(tempUnit): x['main']['temp_max'],
+                    'temperatureMin_{0}'.format(tempUnit): x['main']['temp_min'],
+                    'temperatureMax_{0}'.format(tempUnit): x['main']['temp_max'],
                     'atmposphericPressure_hPa': x['main']['pressure'],
                     'seaLevelPressure_hPa': x['main']['sea_level'],
                     'groundLevelPressure_hPa': x['main']['grnd_level'],
@@ -70,7 +70,7 @@ class WeatherForecast(Analytic):
                     'weatherDescription': x['weather'][0]['description'],
                     'percentCloudiness': x['clouds']['all'],
                     'windSpeed_{0}'.format(windSpeedUnit): x['wind']['speed'],
-                    'windDirection_def': x['wind']['deg'],
+                    'windDirection_deg': x['wind']['deg'],
                     'visibility_m': x['visibility'],
                     'probabilityOfPrecipitation': x['pop']
                 }

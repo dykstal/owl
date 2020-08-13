@@ -52,7 +52,7 @@ class WeatherForecast(Analytic):
                     'latitude': res['city']['coord']['lat'],
                     'longitude': res['city']['coord']['lon'],
                     'country': res['city']['country'],
-                    'population': res['city']['population'],
+                    'population': res['city'].get('population', ''),
                     'sunriseTimestamp': datetime.datetime.utcfromtimestamp(res['city']['sunrise']).isoformat(),
                     'sunsetTimestamp': datetime.datetime.utcfromtimestamp(res['city']['sunset']).isoformat(),
                     'startTimestamp': x['dt_txt'].replace(' ', 'T'),
